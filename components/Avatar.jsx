@@ -1,7 +1,7 @@
 import { BigHead } from "@bigheads/core";
 
 export const Avatar = () => (
-  <div className="avatar" style={{  position: "absolute", right: 38, top: 7 }}>
+  <div className="avatar" style={{  position: "absolute", right: 38, top: 25 }}>
     <BigHead
       accessory="shades"
       body="chest"
