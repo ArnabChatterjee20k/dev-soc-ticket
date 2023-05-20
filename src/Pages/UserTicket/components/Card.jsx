@@ -4,6 +4,8 @@ import Details from "./Details";
 import { Avatar } from "../../../../components/Avatar";
 import Welcome from "../../../../components/Welcome";
 import Logo from "../../../assets/Logo.png";
+import DottedLine from "../../../../components/DottedLine";
+import UserBarcode from "../../../../components/UserBarcode";
 
 export default function Card() {
   return (
@@ -21,7 +23,16 @@ export default function Card() {
             return <Details key={key} category={key} value={dummyData[key]} />;
           })}
         </ul>
-        <Welcome className="w-40 sm:w-52 mt-6" />
+        <Welcome className="w-40 sm:w-52 mt-4" />
+        <div className="flex relative mt-2">
+          {/* <div class="w-14 h-7 absolute left-[-3rem] bg-gray-300 rounded-b-full transform -rotate-90" /> */}
+          <DottedLine className="w-full" />
+          {/* <div class="w-14 h-7 absolute right-0 bg-gray-300 rounded-b-full transform rotate-90" /> */}
+        </div>
+        <div className="mt-3 flex flex-col items-center">
+          <UserBarcode />
+          <p>Member</p>
+        </div>
       </div>
     </div>
   );
