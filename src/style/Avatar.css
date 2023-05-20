@@ -1,0 +1,11 @@
+/* for mbile screesn below sm */
+.avatar {
+    width: 72px;
+}
+
+/* at sm that is at pcs */
+@media (min-width: 576px){
+    .avatar{
+        width: 100px;
+    }
+}
