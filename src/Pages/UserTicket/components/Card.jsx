@@ -25,9 +25,10 @@ export default function Card() {
           className="w-full absolute top-[-90px] sm:top-[-130px] z-10"
         />
         <Avatar />
-        <ul role="list" className="space-y-5 my-4 self-start">
+        <ul role="list" className="space-y-5 my-4 mt-9 self-start">
           <Details key={"name"} category={"name"} value={userDetails["name"]} />
           <Details
+            className="mt-4"
             key={"email"}
             category={"email"}
             value={userDetails["email"]}
@@ -36,6 +37,12 @@ export default function Card() {
             key={"contact"}
             category={"contact"}
             value={userDetails["contact"]}
+          />
+          <Details
+            sentenceCase={false}
+            key={"id"}
+            category={"DevSoc ID"}
+            value={userDetails["id"]}
           />
         </ul>
         <Welcome className="w-40 sm:w-52 mt-4" />
