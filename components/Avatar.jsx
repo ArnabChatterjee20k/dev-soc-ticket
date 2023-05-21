@@ -1,6 +1,7 @@
 import { BigHead } from "@bigheads/core";
 import { getRandomOptions } from "../src/utils/generateAvatar";
 import { useState } from "react";
+import Pencil from "./Pencil";
 
 export const Avatar = () => {
   const initialConfig = {
@@ -28,10 +29,13 @@ export const Avatar = () => {
   return (
     <div
       onClick={()=>setOptions(getRandomOptions())}
-      className="avatar cursor-pointer"
-      style={{ position: "absolute", right: 38, top: 25 }}
+      className="avatar cursor-pointer flex flex-col"
+      style={{ position: "absolute", right: 38, top: 25 , alignItems:'flex-end' }}
     >
       <BigHead {...options}/>
+      <div style={{marginTop:-12}}>
+        <Pencil className="w-6"/>
+      </div>
     </div>
   );
 };

@@ -10,7 +10,7 @@ function generate() {
   return initial;
 }
 
-export default function Avatar() {
+export default function AvatarPage() {
   const [avatars, setAvatars] = useState(generate());
   const [selected, setSelected] = useState(null);
   const intObserver = useRef();

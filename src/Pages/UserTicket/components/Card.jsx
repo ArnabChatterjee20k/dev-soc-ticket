@@ -7,11 +7,11 @@ import Logo from "../../../assets/Logo.png";
 import DottedLine from "../../../../components/DottedLine";
 import UserBarcode from "../../../../components/UserBarcode";
 import { useParams } from "react-router-dom";
+
 export default function Card() {
   const data = useParams() || null;
   const { id } = data;
   const userDetails = JSON.parse(atob(id));
-  console.log(userDetails);
 
   return (
     <div className="w-[90%] max-w-md relative">
