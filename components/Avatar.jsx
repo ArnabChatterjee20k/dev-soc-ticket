@@ -2,7 +2,6 @@ import { BigHead } from "@bigheads/core";
 import { getRandomOptions } from "../src/utils/generateAvatar";
 import { useState } from "react";
 
-console.log(getRandomOptions())
 export const Avatar = () => {
   const initialConfig = {
     accessory: "shades",

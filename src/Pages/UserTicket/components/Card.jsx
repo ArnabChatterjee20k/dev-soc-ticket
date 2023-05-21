@@ -6,8 +6,13 @@ import Welcome from "../../../../components/Welcome";
 import Logo from "../../../assets/Logo.png";
 import DottedLine from "../../../../components/DottedLine";
 import UserBarcode from "../../../../components/UserBarcode";
-
+import { useParams } from "react-router-dom";
 export default function Card() {
+  const data = useParams() || null;
+  const { id } = data;
+  const userDetails = JSON.parse(atob(id));
+  console.log(userDetails);
+
   return (
     <div className="w-[90%] max-w-md relative">
       <div className="absolute inset-0 w-full h-20 bg-black top-[-41px] z-0 " />
@@ -19,9 +24,17 @@ export default function Card() {
         />
         <Avatar />
         <ul role="list" className="space-y-5 my-4 self-start">
-          {Object.keys(dummyData).map((key) => {
-            return <Details key={key} category={key} value={dummyData[key]} />;
-          })}
+          <Details key={"name"} category={"name"} value={userDetails["name"]} />
+          <Details
+            key={"email"}
+            category={"email"}
+            value={userDetails["email"]}
+          />
+          <Details
+            key={"contact"}
+            category={"contact"}
+            value={userDetails["contact"]}
+          />
         </ul>
         <Welcome className="w-40 sm:w-52 mt-4" />
         <div className="flex relative mt-2">
