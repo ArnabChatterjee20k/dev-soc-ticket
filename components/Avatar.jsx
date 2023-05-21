@@ -20,7 +20,7 @@ export const Avatar = () => {
         alignItems: "flex-end",
       }}
     >
-      <BigHead {...options} clothing={selectRandomValue(['shirt', 'dressShirt',  'dress'])} body="chest"/>
+      <BigHead {...options}/>
       <div style={{ marginTop: -12 ,width:"18px"}}>
         <Pencil className="w-6" />
       </div>

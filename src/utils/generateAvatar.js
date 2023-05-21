@@ -35,7 +35,7 @@ export function getRandomOptions() {
     const accessory = selectRandomKey(accessoryMap);
     const graphic = selectRandomKey(graphicsMap);
     const hat = selectRandomKey(hatMap);
-
+    const body = selectRandomKey(bodyMap);
     const hairColor = selectRandomKey(theme.colors.hair);
     const clothingColor = selectRandomKey(theme.colors.clothing);
     const circleColor = selectRandomKey(theme.colors.bgColors);

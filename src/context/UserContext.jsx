@@ -33,8 +33,7 @@ export default function UserContext({ children }) {
     mouth: "open",
     skinTone: "brown",
   };
-  const currentOptions = getRandomOptions() || initialConfig;
-  const [options, setOptions] = useState(currentOptions);
+  const [options, setOptions] = useState(initialConfig);
   const [avatars, setAvatars] = useState(generate());
   const [selected, setSelected] = useState(null);
 
