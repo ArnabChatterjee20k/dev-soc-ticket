@@ -4,9 +4,9 @@ import UserContext from "./context/UserContext";
 import "./style/Avatar.css";
 import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
+import NotFound from "./Pages/NotFound/NotFound";
 export default function App() {
-  const data = useParams();
-  console.log(data);
+
   return (
     <ErrorBoundary fallbackRender={fallbackRender}>
     <UserContext>
@@ -14,6 +14,7 @@ export default function App() {
         <Routes>
           <Route path="/avatar" element={<AvatarPage />} />
           <Route path="/ticket/:id" element={<UserTicket />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </UserContext>
@@ -27,7 +28,7 @@ function fallbackRender({ error, resetErrorBoundary }) {
   return (
     <div role="alert">
       <p>Some problem occured with your details</p>
-      <pre style={{ color: "red" }}>{error.message}</pre>
+      {/* <pre style={{ color: "red" }}>{error.message}</pre> */}
     </div>
   );
 }
