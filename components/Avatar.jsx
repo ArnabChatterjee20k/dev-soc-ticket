@@ -20,7 +20,7 @@ export const Avatar = () => {
       }}
     >
       <BigHead {...options} />
-      <div style={{ marginTop: -12 }}>
+      <div style={{ marginTop: -12 ,width:"18px"}}>
         <Pencil className="w-6" />
       </div>
     </div>
