@@ -1,5 +1,5 @@
 import React, { useCallback, useState, useRef, useEffect } from "react";
-import { getRandomOptions } from "../../utils/generateAvatar";
+import { getRandomOptions, selectRandomValue } from "../../utils/generateAvatar";
 import { BigHead } from "@bigheads/core";
 import Logo from "../../assets/Logo.png";
 import { useUserContext } from "../../context/UserContext";
@@ -54,7 +54,7 @@ export default function AvatarPage() {
             className={`w-full max-w-[90%] sm:w-1/2 md:w-1/3 lg:w-1/4 relative cursor-pointer hover:bg-slate-300 rounded-lg`}
             ref={index === avatars.length - 3 ? lastPaletteRef : null}
           >
-            <BigHead {...data} />
+            <BigHead {...data} clothing={selectRandomValue(['shirt', 'dressShirt',  'dress'])} body="chest"/>
           </div>
         ))}
       </main>

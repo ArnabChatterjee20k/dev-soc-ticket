@@ -27,7 +27,7 @@ function fallbackRender({ error, resetErrorBoundary }) {
   return (
     <div role="alert">
       <p>Some problem occured with your details</p>
-      {/* <pre style={{ color: "red" }}>{error.message}</pre> */}
+      <pre style={{ color: "red" }}>{error.message}</pre>
     </div>
   );
 }

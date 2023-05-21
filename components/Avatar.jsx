@@ -1,9 +1,10 @@
 import { BigHead } from "@bigheads/core";
-import { getRandomOptions } from "../src/utils/generateAvatar";
+import { getRandomOptions, selectRandomValue } from "../src/utils/generateAvatar";
 import { useState } from "react";
 import Pencil from "./Pencil";
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../src/context/UserContext";
+
 export const Avatar = () => {
   const {options,setOptions} = useUserContext()
   // console.log(options)
@@ -19,7 +20,7 @@ export const Avatar = () => {
         alignItems: "flex-end",
       }}
     >
-      <BigHead {...options} />
+      <BigHead {...options} clothing={selectRandomValue(['shirt', 'dressShirt',  'dress'])} body="chest"/>
       <div style={{ marginTop: -12 ,width:"18px"}}>
         <Pencil className="w-6" />
       </div>

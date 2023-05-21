@@ -18,6 +18,11 @@ function selectRandomKey(object) {
   ];
 }
 
+export function selectRandomValue(array) {
+  const randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
+}
+
 export function getRandomOptions() {
   try {
     const skinTone = selectRandomKey(theme.colors.skin);
@@ -30,7 +35,6 @@ export function getRandomOptions() {
     const accessory = selectRandomKey(accessoryMap);
     const graphic = selectRandomKey(graphicsMap);
     const hat = selectRandomKey(hatMap);
-    const body = selectRandomKey(bodyMap);
 
     const hairColor = selectRandomKey(theme.colors.hair);
     const clothingColor = selectRandomKey(theme.colors.clothing);
