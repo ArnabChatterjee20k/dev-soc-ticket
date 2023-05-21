@@ -7,12 +7,14 @@ import Logo from "../../../assets/Logo.png";
 import DottedLine from "../../../../components/DottedLine";
 import UserBarcode from "../../../../components/UserBarcode";
 import { useParams } from "react-router-dom";
+import { useUserContext } from "../../../context/UserContext";
 
 export default function Card() {
   const data = useParams() || null;
   const { id } = data;
   const userDetails = JSON.parse(atob(id));
-
+  const {setUser} = useUserContext()
+  
   return (
     <div className="w-[90%] max-w-md relative">
       <div className="absolute inset-0 w-full h-20 bg-black top-[-41px] z-0 " />
